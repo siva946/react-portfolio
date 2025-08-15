@@ -3,6 +3,8 @@ import ProfileImage from "../assets/pp.png";
 import { useState, useEffect } from "react";
 import * as Icon from "react-bootstrap-icons";
 import { Container,Card,Row,Col } from "react-bootstrap";
+   import Tilt from 'react-parallax-tilt';
+
 function Home() {
     const ContactLinks=[
         {
@@ -78,7 +80,7 @@ function Home() {
           className="col-lg-6 d-flex flex-column px-5 py-3"
           style={{ fontSize: "2rem" }}
         >
-          <p className="fw-bold">
+          <p className="fw-bold text-white">
             Hi There!! <span className="waveAnimation">👋</span>
           </p>
           <p className="fw-bold text-primary">I'M SIVA SUBRAMANI V</p>
@@ -106,11 +108,11 @@ function Home() {
           />
         </div>
     </div>
-    <Container className="mt-5">
+    <Container className="mt-5 text-white">
         <h1 className="text-center">FIND ME ON</h1>
-        <p className="text-center"> Free to <span style={{color:"black"}}>connect</span> with me</p>
+        <p className="text-center"> Free to <span style={{color:"#0e1c26",fontWeight:"600"}}>connect</span> with me</p>
         <Row className="d-flex justify-content-center align-items-center">
-            <Col className="    d-flex justify-content-center align-items-center">
+            <Col className="    d-flex justify-content-center align-items-center mt-2">
                 {ContactLinks.map((link, index) => (
                     
                     <a href={link.url} target="_blank" rel="noopener noreferrer" key={index} className="mx-3"
@@ -120,17 +122,17 @@ function Home() {
                         <i className="icon" style={{
                             width:"40px",
                             height:"40px",
-                            margin:"0 10px",
+                            margin:"0 auto",
                             borderRadius:"50%",
-                            backgroundColor:"transparent",
+                            backgroundColor:"#E0E1DD",
                             display:"flex",
                             alignItems:"center",
                             justifyContent:"center",
                             transition:"all 0.3s ease",
-                            color:"#bf00ff",
+                            color:"#4682b4",
                             boxShadow:
                       activeIndex === index
-                        ? "0 0 10px 5px #bf00ff"
+                        ? "0 0 10px 5px #4682b4"
                         : "none",
                         }}>{link.icon}</i>
                     </a>

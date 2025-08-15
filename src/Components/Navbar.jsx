@@ -26,6 +26,7 @@ function Navbar() {
             listStyleType: "none",
             textDecoration: "none",
             fontSize: "1.3rem",
+            color:"#E0E1DD"
           }}
         >
           {navbar.map((navs, index) => (

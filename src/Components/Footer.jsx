@@ -1,13 +1,13 @@
 function Footer() {
   return (
     <footer className=" py-4 mt-5 ">
-        <div className="row text-center text-md-start align-items-center">
+        <div className="row text-center text-white text-md-start align-items-center">
           
           {/* Left Section */}
           <div className="col-md-4 mb-3 mb-md-0">
             <h5 className="fw-bold">Siva Subramani</h5>
             <p className="mb-0">© {new Date().getFullYear()} All rights reserved.</p>
-            <small className="text-muted">Built with React & Bootstrap</small>
+            <small className="text-white">Built with React & Bootstrap</small>
           </div>
 
           {/* Middle Section */}

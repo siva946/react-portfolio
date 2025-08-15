@@ -8,7 +8,7 @@ function GlobalVantaBackground() {
 
   useEffect(() => {
     if (!effectRef.current) {
-      effectRef.current =FOG({
+      effectRef.current = FOG({
         el: vantaRef.current,
         THREE,
         mouseControls: true,
@@ -16,12 +16,12 @@ function GlobalVantaBackground() {
         gyroControls: false,
         minHeight: 200.0,
         minWidth: 200.0,
-       highlightColor: 0x00ddeb,
-  midtoneColor: 0x4682b4,
-  lowlightColor: 0xe6f0fa,
-  baseColor: 0x0e1c26,
-        blurFactor: .60,
-        speed: 1
+        highlightColor: 0x00ddeb,
+        midtoneColor: 0x4682b4,
+        lowlightColor: 0xe6f0fa,
+        baseColor: 0x0e1c26,
+        blurFactor: 0.6,
+        speed: 1,
       });
     }
     return () => {

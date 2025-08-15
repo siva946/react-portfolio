@@ -10,6 +10,7 @@ import Footer from "./Components/Footer";
 import GlobalVantaBackground from "./Components/GlobalVantaBackground";
 
 function App() {
+    
   return (
     <div>
       <GlobalVantaBackground/>
