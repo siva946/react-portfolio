@@ -5,7 +5,7 @@ function Experience() {
         {
             title: "Web Developer Intern",
             company: "Sai Techno Solutions",
-            link: "https://www.linkedin.com/company/techno-vision-innovations/",
+            link: "https://saitechnosolutions.com/",
             description: "Worked as a web developer intern for 1 month, contributing to responsive websites.",
             icon: "devicon-html5-plain colored"
         },

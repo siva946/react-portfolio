@@ -3,33 +3,27 @@ import ProfileImage from "../assets/pp.png";
 import { useState, useEffect } from "react";
 import * as Icon from "react-bootstrap-icons";
 import { Container,Card,Row,Col } from "react-bootstrap";
-   import Tilt from 'react-parallax-tilt';
 
 function Home() {
     const ContactLinks=[
         {
             name: "LinkedIn",
-            url: "#",
+            url: "https://www.linkedin.com/in/siva-subramani-v-6b340628a",
             icon: <Icon.Linkedin className="icon" />
         },
         {
             name: "GitHub",
-            url: "github",
+            url: "https://github.com/siva946",
             icon: <Icon.Github className="icon" />
         },
         {
             name: "Instagram",
-            url: "instagram",
+            url: "https://www.instagram.com/dark__offcl/",
             icon: <Icon.Instagram className="icon" />
         },
         {
-            name: "Twitter",
-            url: "twitter",
-            icon: <Icon.Twitter className="icon" />
-        },
-        {
             name: "Email",
-            url: "email",
+            url: "mailto:velusiva292@gmail.com",
             icon: <Icon.EnvelopeFill className="icon" />
         }
     ]
