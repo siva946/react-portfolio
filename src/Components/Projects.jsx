@@ -4,7 +4,6 @@ import VoiceAssistant from "../assets/project1.jpg";
 import Portfolio from "../assets/project3.png";
 import Ecommerce from "../assets/project5.png";
 import Chatbot from "../assets/project7.png";
-import { image } from "framer-motion/client";
 function Projects() {
   const projects = [
     {
