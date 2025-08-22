@@ -1,5 +1,5 @@
 import React from "react";
-import ProfileImage from "../assets/pp.png";
+import pp from "../assets/pp.png";
 import { useState, useEffect } from "react";
 import * as Icon from "react-bootstrap-icons";
 import { Container,Card,Row,Col } from "react-bootstrap";
@@ -89,7 +89,7 @@ function Home() {
 
         <div className="Image col-lg-6 d-flex justify-content-center align-items-center">
           <img
-            src={ProfileImage}
+            src={pp}
             alt="Profileimage"
             className="w-100 h-100"
             style={{
