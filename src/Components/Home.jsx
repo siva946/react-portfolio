@@ -1,5 +1,5 @@
 import React from "react";
-import ProfilePic from "../assets/pp.png";
+import ProfilePic from "../assets/pp.apng";
 import { useState, useEffect } from "react";
 import * as Icon from "react-bootstrap-icons";
 import { Container,Card,Row,Col } from "react-bootstrap";
