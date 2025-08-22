@@ -1,9 +1,9 @@
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
-import imageRestoration from "../assets/project2.png";
-import VoiceAssistant from "../assets/project1.jpg";
-import Portfolio from "../assets/project3.png";
-import Ecommerce from "../assets/project5.png";
-import Chatbot from "../assets/project7.png";
+import imageRestoration from "../assets/project2.apng";
+import VoiceAssistant from "../assets/project1.apng";
+import Portfolio from "../assets/project3.apng";
+import Ecommerce from "../assets/project5.apng";
+import Chatbot from "../assets/project7.apng";
 function Projects() {
   const projects = [
     {
