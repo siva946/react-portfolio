@@ -1,6 +1,28 @@
+import { Link } from 'react-router-dom';
+
 function Footer() {
   return (
-    <footer className=" py-4 mt-5 ">
+    <footer className="py-4 mt-5">
+      <style>{`
+        footer a {
+          transition: all 0.3s;
+        }
+        footer a:hover {
+          color: #4682b4 !important;
+          transform: translateY(-2px);
+        }
+        @media (max-width: 320px) {
+          footer .col-md-4 {
+            font-size: 0.9rem;
+          }
+          footer h5 {
+            font-size: 1rem;
+          }
+          footer i {
+            font-size: 1.2rem !important;
+          }
+        }
+      `}</style>
         <div className="row text-center text-white text-md-start align-items-center">
           
           {/* Left Section */}
@@ -13,9 +35,9 @@ function Footer() {
           {/* Middle Section */}
           <div className="col-md-4 mb-3 mb-md-0 text-md-center">
             <p className="mb-2 fw-bold">Quick Links</p>
-            <a href="/experience" className="text-light me-3 text-decoration-none">Experience</a>
-            <a href="/projects" className="text-light me-3 text-decoration-none">Projects</a>
-            <a href="/resume" className="text-light text-decoration-none">Resume</a>
+            <Link to="/experience" className="text-light me-3 text-decoration-none">Experience</Link>
+            <Link to="/projects" className="text-light me-3 text-decoration-none">Projects</Link>
+            <Link to="/resume" className="text-light text-decoration-none">Resume</Link>
           </div>
 
           {/* Right Section */}

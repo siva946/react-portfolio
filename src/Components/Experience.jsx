@@ -1,37 +1,38 @@
 import { Container, Row, Col, Card } from "react-bootstrap";
 
-function Experience() {
-    const experiences = [
-        {
-            title: "Web Developer Intern",
-            company: "Sai Techno Solutions",
-            link: "https://saitechnosolutions.com/",
-            description: "Worked as a web developer intern for 1 month, contributing to responsive websites.",
-            icon: "devicon-html5-plain colored"
-        },
-        {
-            title: "Freelance Web Developer",
-            description: "Worked as a freelance web developer for 1 year, creating modern web applications.",
-            icon: "devicon-react-plain colored"
-        },
-        {
-            title: "Owner - Customized Gifts Shop",
-            company: "CB Photoframes and Gifts",
-            link: "https://www.instagram.com/chotta_bheem__photo_frames",
-            description: "Owned and managed a customized gifts shop for 1 year, focusing on e-commerce branding.",
-            icon: "devicon-shopify-plain colored"
-        }
-    ];
+const EXPERIENCES = [
+    {
+        title: "Web Developer Intern",
+        company: "Sai Techno Solutions",
+        link: "https://saitechnosolutions.com/",
+        description: "Worked as a web developer intern for 1 month, contributing to responsive websites.",
+        icon: "devicon-html5-plain colored"
+    },
+    {
+        title: "Freelance Web Developer",
+        description: "Worked as a freelance web developer for 1 year, creating modern web applications.",
+        icon: "devicon-react-plain colored"
+    },
+    {
+        title: "Owner - Customized Gifts Shop",
+        company: "CB Photoframes and Gifts",
+        link: "https://www.instagram.com/chotta_bheem__photo_frames",
+        description: "Owned and managed a customized gifts shop for 1 year, focusing on e-commerce branding.",
+        icon: "devicon-shopify-plain colored"
+    }
+];
 
-    const skillSet = [
-        "devicon-html5-plain colored", "devicon-angularjs-plain colored", "devicon-javascript-plain colored",
-        "devicon-python-plain colored", "devicon-java-plain colored", "devicon-css3-plain colored",
-        "devicon-go-plain colored", "devicon-react-plain colored", "devicon-bootstrap-plain colored",
-        "devicon-tailwindcss-plain colored", "devicon-mongodb-plain colored", "devicon-nodejs-plain colored",
-        "devicon-flask-plain colored", "devicon-mysql-plain colored", "devicon-materialui-plain colored",
-        "devicon-git-plain colored", "devicon-github-plain colored", "devicon-netlify-plain colored",
-        "devicon-firebase-plain colored", "devicon-photoshop-plain colored", "devicon-figma-plain colored"
-    ];
+const SKILL_SET = [
+    "devicon-html5-plain colored", "devicon-angularjs-plain colored", "devicon-javascript-plain colored",
+    "devicon-python-plain colored", "devicon-java-plain colored", "devicon-css3-plain colored",
+    "devicon-go-plain colored", "devicon-react-plain colored", "devicon-bootstrap-plain colored",
+    "devicon-tailwindcss-plain colored", "devicon-mongodb-plain colored", "devicon-nodejs-plain colored",
+    "devicon-flask-plain colored", "devicon-mysql-plain colored", "devicon-materialui-plain colored",
+    "devicon-git-plain colored", "devicon-github-plain colored", "devicon-netlify-plain colored",
+    "devicon-firebase-plain colored", "devicon-photoshop-plain colored", "devicon-figma-plain colored"
+];
+
+function Experience() {
 
     return (
         <div className="experience-wrapper">
@@ -40,7 +41,7 @@ function Experience() {
                     {/* Left Column - Experience */}
                     <Col md={6} className="px-5">
                         <h1 className="section-title">Experience</h1>
-                        {experiences.map((exp, index) => (
+                        {EXPERIENCES.map((exp, index) => (
                             <Card key={index} className="glass-card my-4">
                                 <div className="card-icon">
                                     <i className={exp.icon} style={{ fontSize: "2.5rem" }} />
@@ -65,8 +66,8 @@ function Experience() {
                                 <i className="devicon-react-plain colored" style={{ fontSize: "3rem" }} />
                             </div>
                             <div className="orbit">
-                                {skillSet.map((icon, i) =>{
-                                    const angle = (360 / skillSet.length) * i;
+                                {SKILL_SET.map((icon, i) =>{
+                                    const angle = (360 / SKILL_SET.length) * i;
                                     return(
                                         <div key={i} className="orbit-item" style={{ transform: `rotate(${angle}deg) translate(260px) rotate(-${angle}deg)` }}>
                                         <i className={icon} style={{ fontSize: "1.8rem" }} />
@@ -114,9 +115,13 @@ function Experience() {
                     font-weight: 700;
                 }
                 .card-content a {
-                    color: #ffae00;
+                    color: #4682b4;
                     text-decoration: none;
                     font-weight: 600;
+                    transition: color 0.3s;
+                }
+                .card-content a:hover {
+                    color: #5a9fd4;
                 }
                 .card-content p {
                     margin-top: 5px;
@@ -126,6 +131,48 @@ function Experience() {
                 .skills-orbit-wrapper {
                     position: relative;
                     height: 650px;
+                }
+                @media (max-width: 768px) {
+                    .skills-orbit-wrapper {
+                        height: 400px;
+                    }
+                    .orbit-center {
+                        width: 300px;
+                        height: 300px;
+                    }
+                    .orbit-item {
+                        transform: rotate(var(--angle)) translate(150px) rotate(calc(-1 * var(--angle))) !important;
+                    }
+                    .orbit-item i {
+                        font-size: 1.2rem !important;
+                    }
+                    .section-title {
+                        font-size: 2rem;
+                    }
+                }
+                @media (max-width: 320px) {
+
+                    .skills-orbit-wrapper {
+                        height: 300px;
+                        display: none !important;
+                    }
+                    .section-title {
+                        font-size: 1.5rem;
+                    }
+                    .glass-card {
+                        padding: 15px;
+                        flex-direction: column;
+                        text-align: center;
+                    }
+                    .card-content h3 {
+                        font-size: 1.2rem;
+                    }
+                    .card-icon {
+                        min-width: auto;
+                    }
+                    .card-icon i {
+                        font-size: 2rem !important;
+                    }
                 }
                 .orbit-center {
                     position: relative;

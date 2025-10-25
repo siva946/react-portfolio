@@ -1,12 +1,70 @@
-# React + Vite
+# Siva Subramani V - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website built with React, Vite, and Bootstrap showcasing my projects, experience, and skills as a Full Stack Developer.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Interactive 3D Background** - Vanta.js fog effect
+- **Responsive Design** - Works seamlessly on all devices
+- **Smooth Animations** - Custom typewriter effect and hover interactions
+- **Orbital Skills Display** - Unique rotating skill showcase
+- **Lazy Loading** - Optimized performance with code splitting
+- **SEO Optimized** - Meta tags and semantic HTML
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React 19
+- Vite
+- Bootstrap 5
+- React Router
+- Three.js & Vanta.js
+- React Bootstrap Icons
+
+## 📦 Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/siva946/portfolio.git
+
+# Navigate to project directory
+cd portfolio
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+## 🏗️ Build
+
+```bash
+# Create production build
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## 📱 Responsive Breakpoints
+
+- Mobile: 480px
+- Tablet: 768px
+- Desktop: 1024px+
+
+## 🎨 Key Components
+
+- **Home** - Hero section with typing animation
+- **Experience** - Work history with orbital skills display
+- **Projects** - Portfolio projects with live demos
+- **Resume** - Downloadable resume with detailed information
+
+## 📄 License
+
+© 2025 Siva Subramani V. All rights reserved.
+
+## 📧 Contact
+
+- Email: velusiva292@gmail.com
+- LinkedIn: [Siva Subramani V](https://www.linkedin.com/in/siva-subramani-v-6b340628a)
+- GitHub: [siva946](https://github.com/siva946)

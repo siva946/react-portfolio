@@ -4,35 +4,41 @@
 body{
     font-family:'Raleway', sans-serif;
     color: #E0E1DD;
+    scroll-behavior: smooth;
 }
 
 .nav-link {
-    color: #fff;
     text-decoration: none;
     padding: 10px 15px;
     display: block;
     position: relative;
+    
     font-size: 16px;
+    font-weight: 500;
     transition: color 0.3s;
 }
 .nav-link::after {
     content: '';
     position: absolute;
     width: 0;
-    height: 4px;
-    border-radius: 4px;
+    height: 2px;
     bottom: 0;
-    right: 0;
-    background-color: #E0E1DD;
-    transition: width 0.3s ease-in-out;
+    left: 50%;
+    background: #E0E1DD;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+.nav-link:hover {
+    color: #fff;
 }
 .nav-link:hover::after {
     width: 100%;
-    left: 0;
+}
+.nav-link.active {
+    color: #fff;
 }
 
-
- .intro{
+.intro{
     display: flex;
     gap: 10px;
     justify-content: center;
@@ -79,5 +85,188 @@ body{
     }
 }
 
+.home-text {
+    font-size: 2rem;
+}
 
+.profile-img {
+    max-width: 550px;
+    transition: transform 0.3s;
+}
 
+.profile-img:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 1024px) {
+    .home-text {
+        font-size: 1.8rem;
+    }
+    .profile-img {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-text {
+        font-size: 1.4rem;
+        padding: 1rem;
+    }
+    .profile-img {
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-text {
+        font-size: 1.1rem;
+        padding: 0.5rem;
+    }
+    .profile-img {
+        max-width: 220px;
+    }
+}
+
+@media (max-width: 320px) {
+    .home-text {
+        font-size: 1.4rem;
+    }
+    .home-text p {
+        margin-bottom: 0.5rem;
+    }
+    .home-text :nth-child(3) {
+        font-size: 1rem;
+    }
+    .typesymbol {
+        font-size: 1rem;
+    }
+    .profile-img {
+        max-width: 250px;
+    }
+    .waveAnimation {
+        font-size: 1.2rem;
+    }
+    /* avoid global .icon sizing here — target contact icons specifically below */
+    h1 {
+        font-size: 1.5rem;
+    }
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+/* Contact icons - base styles and responsive tweaks */
+.contact-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 0.5rem;
+}
+.contact-link {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.2);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+    color: #E0E1DD;
+    background: rgba(255,255,255,0.05);
+}
+/* make the inner icon/svg smaller while keeping the circular button size fixed */
+.contact-btn .icon,
+.contact-btn svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+.contact-link:hover .contact-btn,
+.contact-link.active .contact-btn {
+    background: #4682b4;
+    color: #fff;
+    transform: scale(1.15);
+}
+
+@media (max-width: 480px) {
+    .contact-col { gap: 12px; }
+    .contact-btn { width: 40px; height: 40px; }
+}
+
+@media (max-width: 320px) {
+    /* tighter spacing and slightly smaller icons for very small screens */
+    .contact-col { gap: 8px; }
+    /* keep the visible button tappable, but reduce the inner icon */
+    .contact-btn { width: 45px; height: 45px; }
+    .contact-btn .icon,
+    .contact-btn svg { width: 16px; height: 16px; }
+    h1 { font-size: 1rem; }
+}
+
+/* Resume-specific responsive tweaks */
+@media (max-width: 320px) {
+    /* target the resume container/card we added */
+    .resume-container {
+        padding-left: 8px;
+        padding-right: 8px;
+        max-width: 100%;
+    }
+    .resume-card {
+        margin: 0;
+        border-radius: 8px;
+    }
+    .resume-card-body {
+        padding: 1rem !important;
+    }
+    /* headings and text sizing */
+    .resume-header h1 {
+        font-size: 1.15rem;
+        margin-bottom: 0.5rem;
+    }
+    .resume-card h1 {
+        font-size: 1.25rem;
+    }
+    .resume-card h5, .resume-card h6 {
+        font-size: 0.95rem;
+    }
+    .resume-card p, .resume-card li, .resume-card small {
+        font-size: 13px;
+        line-height: 1.3;
+    }
+
+    /* header links wrap and download button full width */
+    .resume-header-links {
+        flex-wrap: wrap;
+        gap: 6px;
+        justify-content: center;
+    }
+    .resume-download {
+        display: block;
+        width: 100%;
+        max-width: 250px;
+        margin: 0.25rem auto 0.75rem auto;
+        padding: 0.5rem 0.75rem;
+        font-size: 14px;
+    }
+
+    /* reduce spacing for sections */
+    .resume-card .row {
+        gap: 0.5rem;
+    }
+    .resume-card .col-md-8, .resume-card .col-md-4 {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
